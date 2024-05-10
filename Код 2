@@ -1,0 +1,32 @@
+include <iostream>
+#include <string>
+using namespace std;
+class Student {
+    
+public:
+    string surname;
+    string initials;
+    string faculty;
+    string specialty;
+    string formOfStudy;
+    string group;
+
+    Student(string s, string i, string f, string sp, string fs, string g)
+        : surname(s), initials(i), faculty(f), specialty(sp), formOfStudy(fs), group(g) {}
+
+    void displayInfo() {
+        cout << "Прізвище та ініціали студента: " << surname << " " << initials << endl;
+        cout << "Факультет: " << faculty << endl;
+        cout << "Спеціальність: " << specialty << endl;
+        cout << "Форма навчання: " << formOfStudy << endl;
+        cout << "Група: " << group << endl;
+    }
+};
+
+int main() {
+    setlocale(LC_ALL, "rus");
+    Student student("Куликов", "О.В.", "ФІТ", "121", "Денна", "5");
+    student.displayInfo();
+
+    return 0;
+}
